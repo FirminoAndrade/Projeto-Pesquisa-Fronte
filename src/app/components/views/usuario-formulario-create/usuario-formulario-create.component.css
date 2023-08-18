@@ -1,0 +1,56 @@
+.campo_maior {
+  font-weight: bold;
+  text-align: center;
+  width: 38.5%;
+  margin-left: 2rem;
+  float: left;
+}
+
+.campo_menor {
+  width: 25%;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+h1 {
+  color:  rgb(228, 169, 43);
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
+button {
+  padding: 0 50px;
+  margin-left: 50px;
+}
+
+.buttons {
+  margin-left: 650px;
+}
+
+body {
+  background-color: #53065e;
+}
+
+@media screen and (max-width: 600px) {
+  .campo_maior {
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .campo_menor {
+    width: 85%;
+  }
+  .buttons {
+    margin: 0 5px;
+  }
+
+  button {
+    margin-top: 5px;
+    width: 70%;
+    align-items: center;
+  }
+
+}

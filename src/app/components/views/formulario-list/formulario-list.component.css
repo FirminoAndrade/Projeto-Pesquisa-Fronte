@@ -1,0 +1,52 @@
+.content {
+  width: 30%;
+  margin: 1.4rem auto auto auto;
+}
+
+button {
+  margin-left: 10px;
+}
+
+h1 {
+  color: rgb(228, 169, 43);
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
+.nome {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: rgb(228, 169, 43);
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.formulario {
+  color: rgb(228, 169, 43);
+  margin-left: 1.5rem;
+}
+
+body {
+  background-color: #53065e;
+}
+
+@media screen and (max-width: 600px) {
+  .nome {
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  button {
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+}

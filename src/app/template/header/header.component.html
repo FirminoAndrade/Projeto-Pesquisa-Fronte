@@ -1,0 +1,15 @@
+<mat-toolbar class="header">
+  <span>
+    <img src="assets/icons/logo_pesquisa_nome.png" alt="">
+  </span>
+  <div class="icons">
+    <p>Olá, {{ nome }}</p>
+    <button class="menu" mat-icon-button [matMenuTriggerFor]="opcoes"><mat-icon class="iconeMenu" >menu</mat-icon></button>
+    <mat-menu #opcoes="matMenu">
+    <button mat-menu-item routerLink="/home"><mat-icon>home</mat-icon>Home</button>
+    <button mat-menu-item routerLink="/pesquisa"><mat-icon>book</mat-icon>Pesquisas</button>
+    <button mat-menu-item routerLink="/usuario"><mat-icon>personal</mat-icon>Usuários</button>
+    <button mat-menu-item routerLink=""><mat-icon>exit_to_app</mat-icon>Sair</button>
+  </mat-menu>
+</div>
+</mat-toolbar>

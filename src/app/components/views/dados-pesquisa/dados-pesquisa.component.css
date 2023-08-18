@@ -1,0 +1,101 @@
+img {
+  display: block;
+  margin: 0px auto;
+}
+
+.cabecalho {
+  text-align: center;
+}
+
+.button {
+  margin-left: 2rem;
+}
+
+.botaoImprimir {
+  margin-left: 80%;
+  margin-right: 3px;
+}
+
+.dados {
+  display: flex;
+}
+
+.spinner {
+  background-color: orange;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  margin-top: 60px;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+-- retirar botoes da impresao -- .only-print {
+  display: none;
+}
+
+@media print {
+
+  .no-print {
+    display: none !important;
+  }
+
+  .only-print {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  img {
+    height: 70px;
+    transition: 0.3ms ease all
+  }
+
+  .cabecalho {
+    transition: 0.3ms ease all;
+    text-align: center;
+    font-size: 10px
+  }
+
+  .button {
+    transition: 0.3ms ease all;
+    margin-left: 15px;
+    width: 8%;
+    height: 3%
+  }
+
+  .botaoImprimir {
+    transition: 0.3ms ease all;
+    margin-left: 70%;
+    margin-right: 3px;
+    width: 20%;
+    height: 4%
+  }
+
+  .dados {
+    transition: 0.3ms ease all;
+    margin-left: 10px;
+    display: flex;
+    width: 90%;
+    height: 5%
+  }
+
+  .spinner {
+    transition: 0.3ms ease all;
+    background-color: rgb(241, 159, 7);
+    margin-top: 20px;
+    margin-right: auto;
+    text-align: center;
+    width: 7%;
+    height: 5%;
+    text-align: center
+  }
+
+  h2 {
+    transition: 0.3ms ease all;
+    font-size: 8px;
+    text-align: center
+  }
+
+
+}

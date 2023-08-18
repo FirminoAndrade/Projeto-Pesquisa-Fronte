@@ -1,0 +1,47 @@
+<body>
+  <app-header></app-header>
+  <h1>Atualizar Usuário</h1>
+<form>
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome Completo</mat-label>
+    <input matInput [(ngModel)]="usuario.nome"
+    type="text"
+    name="nome" required/>
+  </mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Telefone</mat-label>
+  <input matInput #input maxlength="11" minlength="11" type="number" [(ngModel)]="usuario.telefone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+  name="telefone"
+  placeholder="Ex: 12345678901" required/>
+</mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>E-mail</mat-label>
+  <input type="email" matInput [(ngModel)]="usuario.email"
+  name="email"
+  placeholder="Ex: clinica@yahoo.com" required/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Tipo de Perfil</mat-label>
+  <mat-select [(ngModel)]="usuario.tipoPerfil" name="tipoPerfil">
+    <mat-option *ngFor="let select of tipos" [value]="select.valor">
+      {{select.viewValor}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Senha</mat-label>
+  <input matInput [(ngModel)]="usuario.senha"
+  type="password"
+  name="senha" required/>
+</mat-form-field>
+
+<div class="buttons">
+  <button (click)="atualizarUsuario()" class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+  <button (click)="navegarParaListaUsuarios()" class="mat-elevation-z8" mat-raised-button color="warn">Cancelar</button>
+</div>
+</form>
+</body>

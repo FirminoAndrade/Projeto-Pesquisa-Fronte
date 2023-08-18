@@ -1,0 +1,42 @@
+<body>
+  <app-header></app-header>
+<h1>Deletar Usuário</h1>
+<form>
+
+  <mat-form-field class="campo_maior">
+    <mat-label>Nome Completo</mat-label>
+    <input matInput [(ngModel)]="usuario.nome"
+    type="text"
+    name="nome" disabled/>
+  </mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Tipo Perfil</mat-label>
+  <input matInput [(ngModel)]="usuario.tipoPerfil"
+  type="text"
+  name="tipoPerfil"
+  placeholder="" disabled/>
+</mat-form-field>
+
+<mat-form-field class="campo_maior">
+  <mat-label>E-mail</mat-label>
+  <input matInput [(ngModel)]="usuario.email"
+  type="email"
+  name="email"
+  placeholder="Ex: clinica@yahoo.com" disabled/>
+</mat-form-field>
+
+<mat-form-field class="campo_menor">
+  <mat-label>Telefone</mat-label>
+  <input matInput [(ngModel)]="usuario.telefone"
+    type="number"
+    name="telefone" disabled/>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button (click)="deletarUsuario()" class="mat-elevation-z8" mat-raised-button color="warn">Deletar</button>
+    <button (click)="navegarParaListaUsuarios()" class="mat-elevation-z8" mat-raised-button color="primary">Cancelar</button>
+  </div>
+</form>
+</body>
+

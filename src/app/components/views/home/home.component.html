@@ -1,0 +1,16 @@
+<app-header></app-header>
+<body>
+  <div class="container">
+    <mat-card class="card" *ngFor="let i of pesquisas">
+      <p>#0{{ i.id }}</p>
+      <p><strong>Cidade: </strong>{{ i.nomeCidade }}</p>
+      <p><strong>Estado: </strong>{{ i.estado }}</p>
+      <p><strong>Tipo: </strong>{{ i.tipoPesquisa }}</p>
+      <div class="button">
+        <a (click)="buscarPesquisa(i.id)"
+          ><img src="assets/icons/botao_entrar.png"
+        /></a>
+      </div>
+    </mat-card>
+  </div>
+</body>

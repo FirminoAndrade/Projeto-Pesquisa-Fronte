@@ -1,0 +1,38 @@
+.campo_maior {
+  font-weight: bold;
+  text-align: center;
+  width: 50%;
+  margin-left: 2rem;
+}
+
+.campo_menor {
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+h1 {
+  color:  rgb(228, 169, 43);
+  text-align: center;
+  font-family: Poppins,sans-serif;
+}
+
+form {
+  margin-left: 20rem;
+  width: 50%;
+}
+
+.buttons{
+  width: 100%;
+  text-align: start;
+  margin-left: 2rem;
+}
+
+button {
+  margin-right: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+body {
+  background-color: #53065e;
+}

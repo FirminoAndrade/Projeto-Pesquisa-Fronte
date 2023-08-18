@@ -1,0 +1,125 @@
+<body>
+  <app-header-usuario></app-header-usuario>
+  <h1>Formulário</h1>
+    <form>
+
+      <mat-form-field class="campo_maior">
+       <mat-label>Nome do Entrevistado</mat-label>
+        <input matInput [(ngModel)]="formulario.nome"
+        type="text"
+        name="nome" required/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Endereço</mat-label>
+        <input matInput [(ngModel)]="formulario.endereco"
+        type="text"
+        name="endereco" required/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Bairro</mat-label>
+        <input matInput [(ngModel)]="formulario.bairro"
+        type="text"
+        name="bairro" required/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Cidade</mat-label>
+        <input matInput [(ngModel)]="formulario.cidade"
+        type="text"
+        name="cidade" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Telefone</mat-label>
+        <input matInput #input maxlength="11" minlength="11" minlength="11" type="number" [(ngModel)]="formulario.telefone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        name="telefone"
+        placeholder="Ex: 12345678901" required/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Data da Entrevista</mat-label>
+        <input matInput [(ngModel)]="formulario.data"
+        type="text"
+        name="data" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Gênero</mat-label>
+        <mat-select [(ngModel)]="formulario.genero" name="genero" required>
+          <mat-option *ngFor="let select of tipoGenero" [value]="select.valor">
+            {{select.valor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Idade</mat-label>
+        <input matInput [(ngModel)]="formulario.idade"
+        type="text"
+        name="idade" required/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Nivel de Ensino</mat-label>
+        <mat-select [(ngModel)]="formulario.nivelEnsino" name="nivelEnsino" required>
+          <mat-option *ngFor="let select of nivelEnsino" [value]="select.valor">
+            {{select.valor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Renda</mat-label>
+        <mat-select [(ngModel)]="formulario.renda" name="renda" required>
+          <mat-option *ngFor="let select of renda" [value]="select.valor">
+            {{select.valor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Opção de Voto</mat-label>
+        <mat-select [(value)]="formulario.opcaoVoto" name="opcaoVoto" required>
+          <mat-option [value]="votoBranco">Branco</mat-option>
+          <mat-option [value]="pesquisa.candidato4">{{ pesquisa.candidato4 }}</mat-option>
+          <mat-option [value]="pesquisa.candidato1">{{ pesquisa.candidato1 }}</mat-option>
+          <mat-option [value]="pesquisa.candidato3">{{ pesquisa.candidato3 }}</mat-option>
+          <mat-option [value]="pesquisa.candidato2">{{ pesquisa.candidato2 }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Aprovação de Presidente</mat-label>
+        <mat-select [(ngModel)]="formulario.aprovacaoPresidente" name="aprovacaoPresidente" required>
+          <mat-option *ngFor="let select of satisfacao" [value]="select.valor">
+            {{select.valor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Aprovação de Governador</mat-label>
+        <mat-select [(ngModel)]="formulario.aprovacaoGovernador" name="aprovacaoGovernador" required>
+          <mat-option *ngFor="let select of satisfacao" [value]="select.valor">
+            {{select.valor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Aprovação de Prefeito</mat-label>
+        <mat-select [(ngModel)]="formulario.aprovacaoPrefeito" name="aprovacaoPrefeito" required>
+          <mat-option *ngFor="let select of satisfacao" [value]="select.valor">
+            {{select.valor}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+
+   <div class="buttons">
+     <button (click)="criarFormulario()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
+     <button (click)="navegarParaHome()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+  </body>

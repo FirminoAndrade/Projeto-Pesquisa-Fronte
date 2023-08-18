@@ -1,0 +1,60 @@
+<body>
+  <app-header></app-header>
+  <h1>Deletar Pesquisa</h1>
+    <form>
+
+      <mat-form-field class="campo_maior">
+       <mat-label>Nome da Cidade</mat-label>
+        <input matInput [(ngModel)]="pesquisa.nomeCidade"
+        type="text"
+        name="nomeCidade" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Estado</mat-label>
+        <input matInput [(ngModel)]="pesquisa.estado"
+        type="text"
+        name="estado" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Tipo de Pesquisa</mat-label>
+        <input matInput [(ngModel)]="pesquisa.tipoPesquisa"
+        type="text"
+        name="tipoPesquisa" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Candidato 1</mat-label>
+        <input matInput [(ngModel)]="pesquisa.candidato1"
+        type="text"
+        name="candidato1" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Candidato 2</mat-label>
+        <input matInput [(ngModel)]="pesquisa.candidato2"
+        type="text"
+        name="candidato2" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Candidato 3</mat-label>
+        <input matInput [(ngModel)]="pesquisa.candidato3"
+        type="text"
+        name="candidato3" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo">
+        <mat-label>Candidato 4</mat-label>
+        <input matInput [(ngModel)]="pesquisa.candidato4"
+        type="text"
+        name="candidato4" disabled/>
+      </mat-form-field>
+   </form>
+
+   <div class="buttons">
+     <button (click)="deletarPesquisa()" class="mat-elevation-z8" mat-raised-button color="primary">DELETAR</button>
+     <button (click)="navegarParaListaPesquisas()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+  </body>

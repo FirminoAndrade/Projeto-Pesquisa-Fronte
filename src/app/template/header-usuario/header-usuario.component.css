@@ -1,0 +1,32 @@
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #812f81;
+}
+
+.icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(228, 169, 43);
+}
+
+p {
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+  .icon {
+    margin-top: 7px;
+  }
+}

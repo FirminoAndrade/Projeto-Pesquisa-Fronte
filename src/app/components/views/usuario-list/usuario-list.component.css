@@ -1,0 +1,36 @@
+.content {
+  width: 80%;
+  margin: 1.4rem auto auto auto;
+}
+
+.mat-mdc-form-field {
+font-size: 14px;
+margin-left: 20px;
+}
+
+h1 {
+  color:  rgb(228, 169, 43);
+  text-align: center;
+  font-family: Poppins,sans-serif;
+}
+
+.button_Opcoes {
+  margin-top: 15px;
+}
+
+button {
+  margin-bottom: 1rem;
+}
+
+.delete {
+  color: rgb(253, 0, 0);
+  margin-left: .50rem;
+}
+
+.edit {
+  color: rgb(55, 11, 211);
+}
+
+body {
+ background-color: #53065e;
+}

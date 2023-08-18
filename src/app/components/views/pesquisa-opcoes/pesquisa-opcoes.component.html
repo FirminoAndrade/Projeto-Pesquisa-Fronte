@@ -1,0 +1,78 @@
+<body>
+  <app-header></app-header>
+
+  <div class="content">
+    <h1>Lista de Pesquisas</h1>
+
+    <button class="mat-elevation-z8" mat-button (click)="navegarParaUsuarioCreate()" mat-raised-button color="primary">Adicionar Pesquisa</button>
+
+    <mat-form-field>
+      <mat-label>Filtro</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+    </mat-form-field>
+
+    <div class="mat-elevation-z8 content-table">
+
+      <table class="table" mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="nomeCidade">
+          <th mat-header-cell *matHeaderCellDef>CIDADE</th>
+          <td mat-cell *matCellDef="let row">{{ row.nomeCidade }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoPesquisa">
+          <th mat-header-cell *matHeaderCellDef>TIPO PESQUISA</th>
+          <td mat-cell *matCellDef="let row">{{ row.tipoPesquisa }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="estado">
+          <th mat-header-cell *matHeaderCellDef>ESTADO</th>
+          <td mat-cell *matCellDef="let row">{{ row.estado }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="candidato1">
+          <th mat-header-cell *matHeaderCellDef>CANDIDATO 1</th>
+          <td mat-cell *matCellDef="let row">{{ row.candidato1 }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="candidato2">
+          <th mat-header-cell *matHeaderCellDef>CANDIDATO 2</th>
+          <td mat-cell *matCellDef="let row">{{ row.candidato2 }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="candidato3">
+          <th mat-header-cell *matHeaderCellDef>CANDIDATO 3</th>
+          <td mat-cell *matCellDef="let row">{{ row.candidato3 }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="candidato4">
+          <th mat-header-cell *matHeaderCellDef>CANDIDATO 4</th>
+          <td mat-cell *matCellDef="let row">{{ row.candidato4 }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="acoes">
+          <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef>AÇÕES</th>
+          <td mat-cell *matCellDef="let row">
+
+            <button class="button_Opcoes" mat-button [matMenuTriggerFor]="menu" mat-raised-button color="primary">Opções</button>
+            <mat-menu #menu="matMenu">
+              <button routerLink="update/{{ row.id }}" mat-menu-item><mat-icon class="edit">edit</mat-icon> Atualização</button>
+              <button routerLink="delete/{{ row.id }}" mat-menu-item><mat-icon class="delete">delete</mat-icon>Deletar</button>
+            </mat-menu>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">Nenhum Usuário Encontrado: "{{input.value}}"</td>
+        </tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+</div>
+</body>

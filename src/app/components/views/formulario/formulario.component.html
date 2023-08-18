@@ -1,0 +1,104 @@
+<body>
+  <app-header></app-header>
+  <h1>Formulário</h1>
+    <form>
+
+      <mat-form-field class="campo_maior">
+       <mat-label>Nome do Entrevistado</mat-label>
+        <input matInput [(ngModel)]="formulario.nome"
+        type="text"
+        name="nome" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Endereço</mat-label>
+        <input matInput [(ngModel)]="formulario.endereco"
+        type="text"
+        name="endereco" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Bairro</mat-label>
+        <input matInput [(ngModel)]="formulario.bairro"
+        type="text"
+        name="bairro" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Cidade</mat-label>
+        <input matInput [(ngModel)]="formulario.cidade"
+        type="text"
+        name="cidade" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Telefone</mat-label>
+        <input matInput [(ngModel)]="formulario.telefone"
+        type="text"
+        name="telefone" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Data da Entrevista</mat-label>
+        <input matInput [(ngModel)]="formulario.data"
+        type="text"
+        name="data" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Gênero</mat-label>
+        <input matInput [(ngModel)]="formulario.genero"
+        type="text"
+        name="genero" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Idade</mat-label>
+        <input matInput [(ngModel)]="formulario.idade"
+        type="text"
+        name="idade" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Nivel de Ensino</mat-label>
+        <input matInput [(ngModel)]="formulario.nivelEnsino"
+        type="text"
+        name="nivelEnsino" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Renda</mat-label>
+        <input matInput [(ngModel)]="formulario.renda"
+        type="text"
+        name="renda" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Opção de Voto</mat-label>
+        <input matInput [(ngModel)]="formulario.opcaoVoto"
+        type="text"
+        name="opcaoVoto" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Aprovação de Presidente</mat-label>
+        <input matInput [(ngModel)]="formulario.aprovacaoPresidente"
+        type="text"
+        name="aprovacaoPresidente" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_maior">
+        <mat-label>Aprovação de Governador</mat-label>
+        <input matInput [(ngModel)]="formulario.aprovacaoGovernador"
+        type="text"
+        name="aprovacaoGovernador" disabled/>
+      </mat-form-field>
+
+      <mat-form-field class="campo_menor">
+        <mat-label>Aprovação de Prefeito</mat-label>
+        <input matInput [(ngModel)]="formulario.aprovacaoPrefeito"
+        type="text"
+        name="aprovacaoPrefeito" disabled/>
+      </mat-form-field>
+   </form>
+  </body>
