@@ -4,6 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { IPesquisa } from '../models/pesquisa.modelo';
 
+const url = 'projeto-pesquisa-back.vercel.app/api/';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,28 +14,27 @@ export class PesquisaService {
   constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
   public listarPesquisaService(): Observable<any> {
-    return this.http.get("http://localhost:8081/api/pesquisa");
+    return this.http.get(url + "pesquisa");
   }
 
   public criarPesquisaService(cidade: IPesquisa): Observable<IPesquisa> {
-    return this.http.post<IPesquisa>("http://localhost:8081/api/pesquisa",cidade);
+    return this.http.post<IPesquisa>(url + "pesquisa",cidade);
   }
 
   public buscarPorId(id: string): Observable<IPesquisa>{
-    return this.http.get<IPesquisa>("http://localhost:8081/api/pesquisa/"+id);
+    return this.http.get<IPesquisa>(url + "pesquisa/"+id);
   }
 
   public deletePesquisaService(id: string): Observable<any>{
-    return this.http.delete("http://localhost:8081/api/pesquisa/"+id);
+    return this.http.delete(url + "pesquisa/"+id);
   }
 
   public updatePesquisaService(cidade: IPesquisa) {
-    const url = "http://localhost:8081/api/pesquisa/";
-    return this.http.put(url + cidade.id, cidade);
+    return this.http.put(url + "pesquisa/" + cidade.id, cidade);
   }
 
   public quantidadePesquisas(): Observable<any> {
-    return this.http.get("http://localhost:8081/api/pesquisa/quantidade");
+    return this.http.get(url + "pesquisa/quantidade");
   }
 
   public mensagem(msg: string): void {

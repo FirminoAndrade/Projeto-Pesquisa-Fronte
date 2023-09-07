@@ -41,9 +41,16 @@
     name="senha" required/>
   </mat-form-field>
 
+  <mat-form-field class="campo_menor">
+    <mat-label>Confirmar Senha</mat-label>
+    <input matInput [(ngModel)]="ConfirmarSenha"
+    type="password"
+    name="senha" required/>
+  </mat-form-field>
+
 
  <div class="buttons">
-    <button (click)="criarUsuario()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
+    <button (click)="validarSenha()" class="mat-elevation-z8" mat-raised-button color="primary">SALVAR</button>
     <button (click)="navegarParaListaUsuarios()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
   </div>
 </form>

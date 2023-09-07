@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { IFormulario } from '../models/formulario.modelo';
 
-const url = 'http://localhost:8081/api/';
+const url = 'projeto-pesquisa-back.vercel.app/api/';
 
 @Injectable({
   providedIn: 'root',

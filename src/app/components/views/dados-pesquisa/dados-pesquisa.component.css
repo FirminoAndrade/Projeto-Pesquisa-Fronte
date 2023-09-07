@@ -20,17 +20,16 @@ img {
   display: flex;
 }
 
-.spinner {
-  background-color: orange;
+.d{
   border-left: 1px solid black;
-  border-top: 1px solid black;
   margin-top: 60px;
   margin-right: auto;
   text-align: center;
 }
 
 
--- retirar botoes da impresao -- .only-print {
+-- retirar botoes da impresao --
+.only-print {
   display: none;
 }
 
