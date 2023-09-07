@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { IUsuario } from '../models/usuario.modelo';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-const url = 'projeto-pesquisa-back.vercel.app/api/';
+const url = 'http://localhost:8081/api/';
 
 @Injectable({
   providedIn: 'root',
