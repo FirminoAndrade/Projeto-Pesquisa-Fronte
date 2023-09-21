@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://pesquisa-java-bbdd43b4a40b.herokuapp.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
