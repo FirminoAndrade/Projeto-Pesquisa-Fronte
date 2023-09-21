@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
     "@angular/service-worker": "^16.1.0",
+    "cors": "^2.8.5",
     "ngrok": "^5.0.0-beta.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -40,3 +41,5 @@
     "typescript": "~5.1.3"
   }
 }
+
+

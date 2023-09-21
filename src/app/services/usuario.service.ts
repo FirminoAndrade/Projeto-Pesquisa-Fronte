@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { IUsuario } from '../models/usuario.modelo';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-const url = 'https://pesquisa-java-bbdd43b4a40b.herokuapp.com/api/';
+const url = 'https://pesquisa-java-9ade5eb10d42.herokuapp.com/api/';
 
 @Injectable({
   providedIn: 'root',
