@@ -20,6 +20,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  a() {
+    this.router.navigate(['/home']);
+  }
   submitLogin() {
     this.service.validarSenha(this.email, this.senha).subscribe({
       next: (resposta) => {
