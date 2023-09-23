@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { IFormulario } from '../models/formulario.modelo';
 
-const url = 'https://pesquisa-java-9ade5eb10d42.herokuapp.com/api/';
+const url = 'https://api-pesquisa-3dab365d3955.herokuapp.com/api/';
 
 @Injectable({
   providedIn: 'root',
