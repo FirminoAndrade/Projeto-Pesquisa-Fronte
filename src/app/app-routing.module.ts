@@ -20,7 +20,7 @@ import { CanActiveGuard } from './guard.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: UsuarioCreateComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [CanActiveGuard] },
   { path: 'home/usuario', component: UsuarioHomeComponent, canActivate: [CanActiveGuard] },
   { path: 'usuario', component: UsuarioListComponent, canActivate: [CanActiveGuard] },
