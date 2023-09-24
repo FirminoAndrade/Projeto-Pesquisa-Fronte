@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IUsuario } from '../models/usuario.modelo';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { environment } from 'src/environments/environment.prod';
 
-const url = 'https://api-pesquisa-3dab365d3955.herokuapp.com/api/';
+const url = environment.URLPROD
 
 @Injectable({
   providedIn: 'root',

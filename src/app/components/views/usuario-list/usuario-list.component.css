@@ -34,3 +34,38 @@ button {
 body {
  background-color: #53065e;
 }
+
+@media screen and (max-width: 600px) {
+
+  .content {
+    width: 95%;
+    margin: 1.4rem auto auto auto;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .buttonAdd {
+    margin-top: 5px;
+    width: 80%;
+    margin-left: 30px;
+    align-items: center;
+  }
+
+  .table {
+    display: block;
+    width: 150px;
+    height: 290px;
+    overflow: scroll;
+  }
+
+  th {
+    font-size: 12px;
+    margin-left: 50px;
+  }
+
+  td {
+    font-size: 10px;
+  }
+}

@@ -43,3 +43,25 @@ button {
 body {
   background-color: #53065e;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .campo_menor {
+    width: 85%;
+
+  }
+  .buttons {
+    margin: 0 5px;
+  }
+
+  button {
+    margin-top: 5px;
+    width: 70%;
+    margin-left: 50px;
+    align-items: center;
+  }
+
+}

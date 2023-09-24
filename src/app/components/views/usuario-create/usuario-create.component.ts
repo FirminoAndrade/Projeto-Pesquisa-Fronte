@@ -24,14 +24,14 @@ export class UsuarioCreateComponent implements OnInit {
     {valor: 'USUARIO', viewValor: 'USUARIO'},
 ];
 
-ConfirmarSenha: any
+confirmarSenha: any
 
   constructor(private service: UsuarioService, private router: Router) {}
 
   ngOnInit(): void {}
 
   public validarSenha(){
-    if (this.ConfirmarSenha === this.usuario.senha){
+    if (this.confirmarSenha === this.usuario.senha){
       this.criarUsuario();
     } else {
       this.service.mensagem('Senha não Autenticada!');
