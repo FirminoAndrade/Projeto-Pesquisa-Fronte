@@ -1,21 +1,6 @@
-<button
-  type="reset"
-  (click)="navegarParaListaConsultas()"
-  class="button no-print"
-  mat-stroked-buttoncolor="warn"
->
-  <mat-icon>keyboard_return</mat-icon>
-</button>
+<button type="reset" (click)="navegarParaListaConsultas()" class="button no-print" mat-stroked-buttoncolor="warn"><mat-icon>keyboard_return</mat-icon></button>
 
-<button
-  class="botaoImprimir no-print"
-  onclick="window.print()"
-  mat-fab
-  extended
-  color="primary"
->
-  <mat-icon>download</mat-icon> Imprimir
-</button>
+<button class="botaoImprimir no-print" onclick="window.print()" mat-fab extended color="primary"><mat-icon>download</mat-icon> Imprimir</button>
 
 <div class="container_impressao">
   <div>
@@ -26,53 +11,53 @@
     <h1>Relatório</h1>
     <p>{{ pesquisa.tipoPesquisa }}</p>
     <p>{{ pesquisa.nomeCidade }}, {{ pesquisa.estado }}</p>
-    <strong>Total de Votos:</strong> {{ totalVotos }}
+    <p> <strong>Total de Votos:</strong> {{ totalVotos }}
   </div>
 </div>
   <div class="dados">
     <div class="d">
-     <h2>{{ pesquisa.candidato1 }}</h2>
-      <h2> {{ porcentagemA }}%</h2>
+     <p>{{ pesquisa.candidato1 }}</p>
+     <p>{{ porcentagemA }}%</p>
      <p><strong>Votos:</strong> {{ candidatoA }}</p>
-
     </div>
     <div class="d">
-     <h2>{{ pesquisa.candidato2 }}</h2>
-      <h2>{{ porcentagemB }}%</h2>
-      <strong>Votos:</strong> {{ candidatoB }}
+     <p>{{ pesquisa.candidato2 }}</p>
+     <p>{{ porcentagemB }}%</p>
+     <p><strong>Votos:</strong> {{ candidatoB }}</p>
     </div>
     <div class="d">
-     <h2>{{ pesquisa.candidato3 }}</h2>
-      <h2>  {{ porcentagemC }}%</h2>
-      <strong>Votos:</strong> {{ candidatoC }}
+     <p>{{ pesquisa.candidato3 }}</p>
+     <p>{{ porcentagemC }}%</p>
+     <p><strong>Votos:</strong> {{ candidatoC }}</p>
     </div>
     <div class="d">
-     <h2>{{ pesquisa.candidato4 }}</h2>
-      <h2> {{ porcentagemD }}%</h2>
-      <strong>Votos:</strong> {{ candidatoD }}
+     <p>{{ pesquisa.candidato4 }}</p>
+     <p>{{ porcentagemD }}%</p>
+     <p><strong>Votos:</strong> {{ candidatoD }}</p>
     </div>
     <div class="d">
-     <h2>B/N</h2>
-     <h2>{{ porcentagemN }}%</h2>
-     <strong>Votos:</strong> {{ quantidadeVotoNull }}
+     <p>B/N</p>
+     <p>{{ porcentagemN }}%</p>
+     <p><strong>Votos:</strong> {{ quantidadeVotoNull }}</p>
     </div>
   </div>
+
   <div class="dados">
-  <div class="d">
+  <div class="dd">
       <h2>Presidente Atual</h2>
       <p>Otimo: {{presidenteOtimo}}%,</p>
       <p>Regular: {{presidenteRegular}}%</p>
       <p>Ruim: {{presidenteRuim}}%</p>
       <p>Pessimo: {{presidentePessimo}}%</p>
     </div>
-      <div class="d">
+      <div class="dd">
       <h2>Governador Atual</h2>
       <p>Otimo: {{governadorOtimo}}%,</p>
       <p>Regular: {{governadorRegular}}%</p>
       <p>Ruim: {{governadorRuim}}%</p>
       <p>Pessimo: {{governadorPessimo}}%</p>
     </div>
-      <div class="d">
+      <div class="dd">
       <h2>Prefeito Atual</h2>
       <p>Otimo: {{prefeitoOtimo}}%,</p>
       <p>Regular: {{prefeitoRegular}}%</p>
@@ -80,3 +65,4 @@
       <p>Pessimo: {{prefeitoPessimo}}%</p>
     </div>
   </div>
+

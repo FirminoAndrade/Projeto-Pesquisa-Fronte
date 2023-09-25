@@ -9,7 +9,7 @@ img {
   background-color: #812f81;
 }
 
-.icons{
+.icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,10 +22,15 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  img {
+    margin-top: 10px;
+  }
+
   p {
     margin-top: 12px;
     font-size: 15px;
   }
+
   .icon {
     margin-top: 7px;
   }
