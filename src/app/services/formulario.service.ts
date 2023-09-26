@@ -1,4 +1,3 @@
-import { OnlineOfflineService } from './online-offline.service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -12,13 +11,8 @@ const URL = environment.URLPROD
   providedIn: 'root',
 })
 export class FormularioService {
-  constructor(
-    private http: HttpClient,
-    private _snack: MatSnackBar,
-    private OnlineOfflineService: OnlineOfflineService
-  ) {
-    this.ouvirStatusConexao();
-  }
+
+  constructor(private http: HttpClient,private _snack: MatSnackBar) {}
 
   public listarFormulariosService(): Observable<any> {
     return this.http.get(URL + 'formulario');
@@ -29,12 +23,9 @@ export class FormularioService {
   }
 
   public criarFormularioService(id_pesquisa: string, formulario: IFormulario) {
-    if(this.OnlineOfflineService.isOnline) {
-     this.http.post(URL + 'formulario?pesquisa=' + id_pesquisa, formulario);
-    }else {
-    console.log('savar no banco local');
-    }
+    return this.http.post(URL + 'formulario?pesquisa=' + id_pesquisa, formulario);
   }
+
   public buscarPorId(id: string): Observable<IFormulario> {
     return this.http.get<IFormulario>(URL + 'formulario/' + id);
   }
@@ -73,16 +64,6 @@ export class FormularioService {
 
   public quantidadeVotosPorQualificacaoPrefeito(id_pesquisa: string, qualificacao: string): Observable<any> {
     return this.http.get(URL + 'formulario/qualificacao/prefeito/' + id_pesquisa + '/' + qualificacao);
-  }
-
-  private ouvirStatusConexao() {
-    this.OnlineOfflineService.statusConexao.subscribe((online) => {
-      if (online) {
-        console.log('enviando dados do banco local para API');
-      } else {
-        console.log('estou offline');
-      }
-    });
   }
 
   public mensagem(msg: string): void {
