@@ -109,8 +109,13 @@ export class FormularioCreateComponent implements OnInit {
   public criarFormulario(): void {
     this.formulario.cidade = this.pesquisa.nomeCidade;
     this.formulario.data = this.dataConvertida;
-    this.service.criarFormularioService(this.id_pesquisa, this.formulario);
-    this.router.navigate(['/lista/' + this.id_pesquisa]);
+    this.service.criarFormularioService(this.id_pesquisa, this.formulario).subscribe((resposta) => {
+      if (resposta != null){
+       this.router.navigate(['/lista/' + this.id_pesquisa]);
+      } else {
+        this.service.mensagem('Algo deu errado!')
+      }
+   });
   }
 
   public navegarParaListaFormularios() {
